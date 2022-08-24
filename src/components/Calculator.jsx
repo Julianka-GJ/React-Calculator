@@ -61,6 +61,12 @@ const operatorClick = (oper) => {
         setOperat(oper.target.name);
         setResult(result + oper.target.name);
    }
+
+   if (operat && !secondNumber) {
+        setFirstNumber(firstNumber);
+        setResult(firstNumber + oper.target.name);
+        setOperat(oper.target.name);
+   }
 };
 
 const equalsClick = () => {
@@ -161,29 +167,27 @@ const calc = (firstNumber, secondNumber, operat) => {
 
                 <button onClick={handleClick} className="button-number" name="1">1</button>
                 <button onClick={handleClick} className="button-number" name="2">2</button>
+                <button onClick={handleClick} className="button-number" name="3">3</button>
                 <button onClick={operatorClick} className="button-number" name="+">+</button>
 
-                <button onClick={handleClick} className="button-number" name="3">3</button>
                 <button onClick={handleClick} className="button-number" name="4">4</button>
-                <button onClick={operatorClick} className="button-number" name="-">-</button>
-
                 <button onClick={handleClick} className="button-number" name="5">5</button>
                 <button onClick={handleClick} className="button-number" name="6">6</button>
-                <button onClick={operatorClick} className="button-number" name="*">×</button>
+                <button onClick={operatorClick} className="button-number" name="-">-</button>
 
                 <button onClick={handleClick} className="button-number" name="7">7</button>
                 <button onClick={handleClick} className="button-number" name="8">8</button>
+                <button onClick={handleClick} className="button-number" name="9">9</button>
+                <button onClick={operatorClick} className="button-number" name="*">×</button>
+
+                <button onClick={operatorClick} className="button-number" name="^">^</button>
+                <button onClick={handleClick} className="button-number" name="0">0</button>
+                <button onClick={pointClick} className="button-number" name=".">.</button>
                 <button onClick={operatorClick} className="button-number" name="/">/</button>
 
-                <button onClick={handleClick} className="button-number" name="9">9</button>
-                <button onClick={handleClick} className="button-number" name="0">0</button>
                 <button onClick={sqrtClick} className="button-number" name="√">√</button>
-
-                <button onClick={pointClick} className="button-number" name=".">.</button>
-                <button onClick={operatorClick} className="button-number" name="^">^</button>
-                <button onClick={operatorClick} className="button-number" name="%">%</button>
-                
                 <button onClick={equalsClick} className="button-number result">=</button>
+                <button onClick={operatorClick} className="button-number" name="%">%</button>
             </div>
         </div>
     )
