@@ -1,0 +1,82 @@
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 23%;
+    padding: 30px 0 15px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 15px rgba(0,0,0,.6);
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.5);;
+  }
+
+  .entry-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+      input {
+        width: 88%;
+        padding: 10px 0;
+        font-size: 28px;
+        color: #03e9f4;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #03e9f4;
+        outline: none;
+        background: transparent;
+        text-align: right;
+      }
+
+      .operandi {
+        font-size: 18px;
+        color: #3b5c5e;
+        font-weight: 400;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #3b5c5e;
+        padding: 0;
+      }
+  }
+  
+  .keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .button-number {
+    width: 31%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #03e9f4;
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    transition-duration: 0.5s;
+
+    &:hover {
+      box-shadow: 0 0 15px #03e9f4;
+    }
+  }
+
+  .clear {
+    width: 58%;
+  }
+
+  .delete {
+    width: 38%;
+  }
+
+  .result {
+    width: 38%;
+    margin-left: 31%;
+  }
